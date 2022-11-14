@@ -15,10 +15,11 @@ fn main() {
             println!("ID: {}", coin_data.id);
             println!("Image: {}", coin_data.image.small);
             let usd = Money::from_str(
-                    &coin_data.market_data.current_price.usd.to_string(),
-                    iso::USD)
-            .unwrap();
+                &coin_data.market_data.current_price.usd.to_string(),
+                iso::USD)
+                .unwrap();
             println!("Precio en USD: {}", usd);
+            println!("-===================================-");
         }
         Err(error)=>{
             println!("ERROR: {}", error)
